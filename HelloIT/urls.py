@@ -44,7 +44,7 @@ urlpatterns = [
 
     # login via REST
     path('api/rest-auth/',
-         include('rest_auth.urls ')),
+         include('rest_auth.urls')),
 
     # register via REST
     path('api/rest-auth/registration/',

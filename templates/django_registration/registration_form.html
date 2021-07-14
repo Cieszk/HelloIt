@@ -1,0 +1,33 @@
+{% extends 'auth_layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h3>Hello IT</h3>
+    <div class="registration-form-container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-sm btn-outline-primary" style="margin-top: 5px">Utwórz konto</button>
+        </form>
+    </div>
+{% endblock %}
+
+{#          <div style="margin-bottom: 10px">#}
+{#                <th><label>Nazwa użytkownika:</label></th>#}
+{#            </div>#}
+{#            <td>{{ form.username }}</td>#}
+{#            <div style="margin-bottom: 10px">#}
+{#                <th><label>Adres e-mail:</label></th>#}
+{#            </div>#}
+{#            <td>{{ form.email }}</td>#}
+{#            <div style="margin-bottom: 10px">#}
+{#                <th><label>Hasło:</label></th>#}
+{#            </div>#}
+{#            <td>{{ form.password1 }}</td>#}
+{#            <div style="margin-bottom: 10px">#}
+{#                <th><label>Powtórz hasło:</label></th>#}
+{#            </div>#}
+{#            <td>{{ form.password2 }}</td>#}
+{#            <div style="margin-top: 20px">#}
+{#                <button type="submit" class="btn btn-sm btn-outline-primary">Utwórz konto</button>#}
+{#            </div>#}
